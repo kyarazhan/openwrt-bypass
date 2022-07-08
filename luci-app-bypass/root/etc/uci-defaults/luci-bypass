@@ -20,7 +20,7 @@ do
 	if [ "$(uci -q get bypass.@servers[$i].type)" == 'vless' ];then
 		uci -q set bypass.@servers[$i].type='v2ray'
 		uci -q set bypass.@servers[$i].v2ray_protocol='vless'
-	elif [ "$(uci -q get bypass.@servers[$i].type)" == 'vless' ];then
+	elif [ "$(uci -q get bypass.@servers[$i].type)" == 'vmess' ];then
 		uci -q set bypass.@servers[$i].type='v2ray'
 		uci -q set bypass.@servers[$i].v2ray_protocol='vmess'
 	fi
